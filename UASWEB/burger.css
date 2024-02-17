@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    
+}
+
+
+.left-menu {
+    background: rgb(15, 15, 15);
+    position: relative;
+    width: 4.5rem;
+    height: 107vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all .4s ease;
+}
+
+.left-menu:hover {
+    width: 16rem;
+}
+
+.left-menu ul li a {
+    display: flex;
+}
+
+.logo {
+    width: 50px;
+    position: relative;
+    top: 1rem;
+    left: 0.9rem;
+    display: flex;
+    margin: 10px 0 0 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+
+}
+
+.logo span {
+    font-weight: bold;
+    padding: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.logo a {
+    position: relative;
+    left: 180px;
+    color: rgb(78, 71, 33);
+    font-size: 18px;
+    display: table;
+    text-align: left;
+    width: 300px;
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.left-menu ul {
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+ul li {
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    margin-bottom: 1rem;
+    align-items: center;
+    transition: all .3s linear;
+}
+
+ul li a {
+    padding: 0.5rem;
+    color: rgb(78, 71, 33);
+    text-decoration: none;
+}
+
+ul li a i {
+    text-decoration: none;
+    color: rgb(78, 71, 33);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all .3s linear;
+    margin-right: 1.2rem;
+}
+
+.sidebar-item i {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+#settings {
+    position: absolute;
+    bottom: 1rem;
+}
+
+.left-menu ul li:hover {
+    transform: translateX(.4rem);
+    transition: all .4s linear;
+}
+
+.left-menu ul li:hover .fa-solid,
+.left-menu ul li:hover a {
+    font-weight: bold;
+    color: purple;
+}
+.right-content {
+    flex-grow: 1; /* Membuat right-content memanjang sesuai sisa ruang yang tersedia */
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 30%;
+    top: 5%;
+}
+.right-content .content-header h1{
+    color: red;
+    position: absolute;
+    left: 10%;
+    top: 0px;
+}
+
+.right-content .content-header img{
+    width: 100%;
+    position: relative;
+    left: 10%;
+    border-radius: 10px;
+}
+.right-content .content-header input{
+    display: inline;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 50%;
+    position: relative;
+    margin: auto;
+    right: 30%;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    right: 80%;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(201, 61, 61);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0%;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 17px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    position: relative;
+    right: 25%;
+    margin: 0 2px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: white;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+  .tanda .baca{
+    position: relative;
+    margin-bottom: 0px;
+    top: 300%;
+    right: 37%;
+    color: rgb(44, 45, 20);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px black;
+    position: absolute;
+    right: -10px;
+    left: 18%;
+    top: 80%;
+    width: 20%;
+  }
+  
+  .button:hover {background-color: rgb(78, 71, 33)}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Burger Queen </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="outlet.css">
+         <!--
+        Nama : Achmad Chasanuddin
+        Nim  : 10123367
+        Kelas: IF-9
+    -->
+        
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="left-menu">
+            <div class="logo">
+                <img src="../UASWEB/images/burgerqueen.png" alt="">
+                <span><a href="">Burger Queen</a></span>
+            </div>
+            <ul>
+                <li class="sidebar-item"><a class="sidebar-link" href="index.html"><i class="fa-solid fa-house"></i> Home </a>
+                </li>
+                <li class="sidebar-item"><a class="sidebar-link" href="burger.html"><i class="fa-solid fa-burger"></i> Burger </a>
+                </li>
+                <li class="sidebar-item"><a class="sidebar-link" href="beverage.html"><i class="fas fa-glass-cheers"></i> Beverage </a>
+                </li>
+                <li class="sidebar-item"><a class="sidebar-link" href="outlet.html"><i class="fa-solid fa-store"></i> Outlet </a>
+                </li>
+                <li class="sidebar-item"><a class="sidebar-link" href="event.html"><i class="fa-solid fa-calendar-days"></i>
+                        Events </a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="contactus.html"><i class="fa-solid fa-message"></i> Contact Us
+                    </a></li>
+                <li class="sidebar-item" id="settings"><a class="sidebar-link" href="#"><i class="fa-solid fa-gear"></i>
+                        Settings </a>
+                <li>
+            </ul>
+        </div>
+        <!-- Right Content Goes here -->
+        <div class="right-content">
+            <div class="content-header">
+                
+                <body>
+                    <div class="container1">
+                      <div class="cards">
+                        <div class="card card-one">
+                          <h2 class="card-title">Bandung</h2>
+                          <p class="date">Feb 25, 2024</p>
+                          <p class="description">Jln. Braga No. Ganjil 1 - 133 Kel/Ds. Braga Kec. Sumur Bandung - Bandung</p>
+                        </div>
+                        
+                        <div class="card card-two">
+                          <h2 class="card-title">Jakarta</h2>
+                          <p class="date">Apr 06, 2024</p>
+                          <p class="description">Jl. Pintu Satu Senayan, Gelora, Kecamatan Tanah Abang, Kota Jakarta Pusat</p>
+                        </div>
+                        
+                        <div class="card card-three">
+                          <h2 class="card-title">Surabaya</h2>
+                          <p class="date">Nop 10, 2024</p>
+                          <p class="description">Jl. Gubernur Suryo No.1, RW.3, Embong Kaliasin, Kec. Genteng, Surabaya</p>
+                        </div>
+                        
+                        <div class="card card-four">
+                          <h2 class="card-title">Kalimantan</h2>
+                          <p class="date">Jan 01, 2025</p>
+                          <p class="description"> Penajam Paser Utara, Kalimantan Timur</p>
+                        </div>
+                      </div>
+                    </div>
+                  </body>
+                  
+                    
+                    
+        </div>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+        
+</body>
+</html>
